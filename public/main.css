@@ -1,0 +1,172 @@
+body , html , #app{
+    background-color : aliceblue;
+    height: 100%;
+}
+
+#mainPanel{
+    height: 85%;
+}
+
+.pointable{
+    cursor : pointer;
+}
+
+#navigator #home-nav{
+    font-size: 3.5em;
+    margin-inline: 0.5em;
+}
+
+#navigator #view-nav , #settings-nav{
+    font-size: 2.5em;
+}
+
+#navigator .nav-item{
+    margin-right: 3%;
+}
+
+#home-panel{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+}
+
+#contentPanel{
+    height: 100%;
+}
+
+.big-switch{
+    zoom: 2;
+}
+
+
+#endpoint-list{
+    min-width: 100%;
+    max-width: fit-content;
+}
+
+.endpoint-item{
+    border-radius: 8px;
+}
+.endpoint-item:hover{
+    background-color: #585858;
+}
+
+.endpoint-name{
+    font-size: 1.2em;
+    color: white;
+    font-family: Ubuntu;
+}
+
+.search-bg{
+    background-color: #585858;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.endpoint-name:hover{
+    color: white;
+    text-decoration: none;
+}
+
+#app-description{
+    font-family: Ubuntu;
+    font-size : 2em;
+}
+
+#app-title{
+    font-size: 3.5em;
+}
+
+#services-card-deck{
+    max-width: 600px;
+}
+
+.service-name{
+    font-family: Ubuntu;
+    font-size: 1.8em;
+}
+
+.service-description{
+    font-family: Ubuntu;
+    font-size: 1.2em;
+}
+
+#filehub-card-text{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 3px;
+}
+
+#filehub-card-text span:nth-child(2){
+    padding-inline: 1px;
+    margin-left: 2px;
+    border-radius: 3px;
+}
+
+
+#smalltalk-card-text span:first-child{
+    width: fit-content;
+    background-color: #007bff;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#app-version{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#server-list li{
+    border-top-width: 1px;
+}
+
+#delete-btn{
+    z-index: 1;
+}
+
+
+
+/*Fontawesome*/
+
+.fa-pause {
+    color: #dc3545;
+    width: 20px;
+    height: 20px;
+}
+
+.fa-play {
+    color : #28a745;
+    width: 20px;
+    height: 20px;
+}
+
+/*Bootstrap*/
+.list-group-item-action:hover{
+    cursor: pointer;
+}
+
+#endpoint-list > .list-group-item-action{
+    border-radius: 5px;
+}
+
+#endpoint-list > .list-group-item-action:hover{
+    background-color: #585858;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.red{
+    color : #dc3545;
+}
+
+.green{
+    color : #28a745;
+}
+
+
+.bg-gray{
+    background-color: #585858;
+}
+
+.bg-orange{
+    background-color: #ffc107;
+}
