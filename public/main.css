@@ -3,90 +3,36 @@ body , html , #app{
     height: 100%;
 }
 
-#mainPanel{
-    height: 85%;
-}
-
 .pointable{
     cursor : pointer;
 }
 
-#navigator #home-nav{
-    font-size: 3.5em;
-    margin-inline: 0.5em;
-}
-
-#navigator #view-nav , #settings-nav{
-    font-size: 2.5em;
-}
-
-#navigator .nav-item{
-    margin-right: 3%;
-}
-
-#home-panel{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.span-content{
+    width: 100%;
     height: 100%;
-}
-
-#contentPanel{
-    height: 100%;
-}
-
-.big-switch{
-    zoom: 2;
-}
-
-
-#endpoint-list{
-    min-width: 100%;
-    max-width: fit-content;
-}
-
-.endpoint-item{
-    border-radius: 8px;
-}
-.endpoint-item:hover{
-    background-color: #585858;
-}
-
-.endpoint-name{
-    font-size: 1.2em;
-    color: white;
-    font-family: Ubuntu;
-}
-
-.search-bg{
-    background-color: #585858;
-    padding: 5px;
-    border-radius: 6px;
-}
-
-.endpoint-name:hover{
-    color: white;
-    text-decoration: none;
 }
 
 #app-description{
-    font-family: Ubuntu;
-    font-size : 2em;
-}
-
-#app-title{
-    font-size: 3.5em;
+    font-family:  Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
 }
 
 #services-card-deck{
     max-width: 600px;
 }
 
+#about-title{
+    font-size: 3rem;
+    font-weight: 250;
+}
+
 .service-name{
-    font-family: Ubuntu;
+    font-family:  Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.8em;
 }
 
 .service-description{
-    font-family: Ubuntu;
+    font-family:  Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.2em;
 }
 
@@ -110,49 +56,27 @@ body , html , #app{
     border-bottom-right-radius: 12px;
 }
 
+@keyframes wobble{
+    0%  {transform : rotateZ(5deg);}
+    25% {transform : rotateZ(10deg);}
+    50% {transform : rotateZ(-5deg);}
+    100% {transform : rotateZ(0deg)}
+}
+
 #app-version{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    font-size : 1.3rem;
+}
+#app-version-container{
+    top : -1.8rem;
 }
 
-#server-list li{
-    border-top-width: 1px;
-}
-
-#delete-btn{
-    z-index: 1;
-}
-
-
-
-/*Fontawesome*/
-
-.fa-pause {
-    color: #dc3545;
-    width: 20px;
-    height: 20px;
-}
-
-.fa-play {
-    color : #28a745;
-    width: 20px;
-    height: 20px;
+.navbar-brand:hover #app-version{
+    animation-name: wobble;
+    animation-duration: 300ms;
+    animation-iteration-count: 2;
 }
 
 /*Bootstrap*/
-.list-group-item-action:hover{
-    cursor: pointer;
-}
-
-#endpoint-list > .list-group-item-action{
-    border-radius: 5px;
-}
-
-#endpoint-list > .list-group-item-action:hover{
-    background-color: #585858;
-    box-shadow: 2px 2px 2px grey;
-}
 
 .red{
     color : #dc3545;
@@ -169,4 +93,187 @@ body , html , #app{
 
 .bg-orange{
     background-color: #ffc107;
+}
+
+*::-webkit-scrollbar{
+    width : 10px;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: aliceblue;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: #343a40;
+    border-radius: 20px;
+}
+
+*::-webkit-scrollbar-corner{
+    background-color: #343a40;
+}
+
+
+.navbar{
+    background-color : aliceblue;
+    padding-inline: 2rem;
+}
+
+.nav-link{
+    font-size: 2rem;
+
+    transition: font-size 300ms;
+}
+
+.nav-link:hover{
+    font-size : 2.5rem;
+}
+
+#home-nav{
+    font-size : 3.2rem;
+}
+
+.jumbotron{
+    width: 100%;
+    height: auto;
+    background-color : aliceblue;
+}
+
+#main-panel{
+    padding-inline: 5%;
+}
+
+#server-group{
+    width: auto;
+    height: fit-content;
+}
+
+#server-group .card{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available; 
+    max-width: 100%;
+    min-height: max-content;
+}
+#server-group .card-header svg{
+    height: 24px;
+    width: auto;
+}
+#server-group .card-header .server-ctrl{
+    zoom: 1.5;
+}
+#server-group .card-body{
+    padding: 15px;
+}
+
+.server-options .modal-footer{
+    display: contents;
+}
+
+.server-options .btn-group-vertical .btn{
+    padding-inline: 30%;
+}
+
+
+@media (max-width: 768px){
+    #server-group .card{
+        margin-bottom: 10%;
+    }
+}
+
+@media (min-width: 576px){
+    #server-group{
+        column-count: 1;
+        padding-inline : 10%;
+    }
+}
+
+@media (min-width: 768px){
+    #server-group{
+        column-count: 1;
+        padding-inline : 10%;
+    }
+
+    #server-group .card{
+    margin-bottom: 10%;
+    }
+}
+
+@media (min-width: 992px){
+    #server-group{
+        column-count: 1;
+        padding-inline : 10%;
+    }
+    #server-group .card{
+        margin-bottom: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #server-group{
+        column-count: 3;
+    }
+}
+
+.server-card-img{
+    position: absolute;
+    width: 20%;
+    height: auto;
+    opacity: 10%;
+    left: 40%;
+    bottom: 30%;
+}
+
+
+
+#create-server-card{
+    background-color: aliceblue;
+    border : none;
+}
+#create-server-card h5{
+    font-size : 2rem;
+}
+
+#create-server-card .card-body{
+    border-radius: 15px;
+    border-width: 3px;
+    border-style: dashed;
+    border-color: gray;
+}
+
+#create-server-icon{
+    width: 32px;
+    height: auto;
+    opacity: 30%;
+
+    transition: opacity 300ms, width 300ms;
+}
+
+#create-server-card:hover #create-server-icon{
+    opacity: 80%;
+    font-size : 2.3rem;
+}
+
+#create-server-link{
+    transition : font-size 300ms
+}
+
+#create-server-link:hover{
+    font-size : 2.3rem;
+}
+
+#create-endpoint-collapse{
+    margin-block : 2%;
+}
+
+.endpoint-title{
+    font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    margin-left : 9px;
+}
+.endpoint-link{
+    padding-right: 8px!important;
+    text-decoration: none;
+    
+}
+.endpoint-link svg{
+    zoom: 1.1;
 }
